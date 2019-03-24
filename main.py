@@ -123,7 +123,7 @@ for i in range(150,200):
     objective = - content_obj - style_obj
 
     vis = render.render_vis(model, objective, param_f=param_f, thresholds=[512], verbose=False, print_objectives=[content_obj, style_obj])[-1]
-    savepath = "new1/" + data['Keywords'][i] + data['Year'][i] +"_num_"+ str(i) + ".jpg"
+    savepath = "new/" + data['Keywords'][i] + data['Year'][i] +"_num_"+ str(i) + ".jpg"
     print("s")
     save(vis[0], savepath)
     print("end")
