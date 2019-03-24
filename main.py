@@ -111,7 +111,7 @@ for i in range(150,200):
     ImageOps.equalize( Image.open("images/auto"+str(i)+".jpg")).save("images/auto"+str(i)+".jpg")
     os.system('rm hello.jpg')
     content_image = load('images/auto'+str(i)+'.jpg')[...,:3]
-    style_image = load("style2.png")[..., :3] # choose a style
+    style_image = load("style/style2.png")[..., :3] # choose a style
 
     param_f = lambda: style_transfer_param(content_image, style_image)
     content_obj = 100 * activation_difference(content_layers, difference_to=CONTENT_INDEX)
