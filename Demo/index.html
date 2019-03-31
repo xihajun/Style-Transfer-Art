@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo - Junfan</title>
+    <style type="text/css">
+        body{
+            font-family: '微软雅黑';
+        }
+        /*主容器*/
+        .container{
+            width: 90%;
+            margin-top: 20px;
+         	display: inline-block;
+
+        }
+        /*每一个图片预览项容器*/
+        .img-prev-item{
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            border:1px solid #ccc;
+            text-align: center;
+            border-radius: 3px;
+        }
+        /*图片预览容器*/
+        .container .img-prev-container{
+            width: 200px;
+            height: 156px;
+            margin: 0 auto;
+            border-bottom: 1px solid #ccc;
+            vertical-align: middle;
+            display: table-cell;
+            padding: 2px;
+            color: #838383;
+            text-align: center
+        }
+        /*预览图片样式*/
+        .container .img-prev-container img{
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+        }
+        /*label*/
+        .selfile{
+            background-color: #0095ff;
+            color: white;
+            padding: 6px 58px;
+            border-radius: 5px;
+        }
+        /*工具条 div*/
+        .tool{
+            padding-top: 9px;
+        }
+        /*隐藏文件选择器*/
+        #fileSelecter{
+            display: none;
+        }
+ .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '>';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.left {width:300pt;height:auto}
+.middle {width:200pt;height:auto}
+.right {width:600pt;height:auto}
+      .wrap {display:flex;}
+      img#img{display:none;}
+    </style>
+</head>
+<body>
+
+
+<br/>
+   <div class="wrap">
+     
+     <div class="left" >
+
+
+  <div class="src">
+        <div class="dragabled">
+
+            <img class="img" id="tupian1" src="./img/original/1.png" alt="图片1"  height="290" width="300"  />
+<br>
+            <img class="img" id="tupian1" src="./img/original/2.png" alt="图片2"  height="290" width="300"  />
+
+        </div>
+
+    </div>   </div>
+     <div class="middle" >
+    <div class="container" id='target-1'>
+        <div class="img-prev-item">
+            <div class="img-prev-container" id="img-perv-div-1">
+                Choose<br />Drop here
+            </div>
+            <div class="tool">
+                <label for="fileSelecter" class="selfile">Choose</label>
+                <input type="file" value="Choss" id="fileSelecter" />
+            </div>
+        </div>
+    </div>
+    <br>
+<button class="button" style="vertical-align:middle"  onclick="showImg()" ><span>Generate </span></button>
+
+
+  <div class="container" id='target-2'>
+        <div class="img-prev-item">
+            <div class="img-prev-container" id="img-perv-div-2">
+                Choose<br />Drop here
+            </div>
+            <div class="tool">
+                <label for="fileSelecter" class="selfile">Choose</label>
+                <input type="file" value="Choss" id="fileSelecter" />
+            </div>
+        </div>
+    </div>
+
+</div>
+  
+
+<div class="right" >
+
+     <div class="divName">
+<img src="./img/original/3.png" id="img" />
+</div>
+
+  
+  </div>
+  
+    <script type="text/javascript">
+        window.onload = function(){
+
+            //预览图的容器
+            var _img_container = getDomById('img-perv-div-2')
+            var _img_container1 = getDomById('img-perv-div-1')
+            //创建reader对象
+            var reader = new FileReader();
+			var reader1 = new FileReader();
+            //触发 change 事件
+            getDomById('fileSelecter').onchange = function(event){
+                //获取文件对象
+                var file = event.target.files[0];
+
+                //读取完成后触发
+                reader.onload = function(ev){
+                    //获取图片的url
+                    var _img_src = ev.target.result;
+                    //添加预览图片到容器框
+                    showPrevImg(_img_container,_img_src);
+                }
+                //获取到数据的url 图片将转成 base64 格式
+                reader.readAsDataURL(file);
+            }
+
+            //添加拖放支持
+            _img_container.addEventListener('dragover',function(ev){
+                //ev.stopPropagation();
+                ev.preventDefault();//阻止默认事件。比如说Chrome是直接将图片用浏览器打开
+                console.log('dragover')
+            },false)
+            // _img_container.addEventListener('dragend',function(ev){
+            //  ev.stopPropagation();
+            //  ev.preventDefault();
+            //  console.log('dragend')
+            // },false)
+            _img_container.addEventListener('drop',function(ev){
+                //ev.stopPropagation();
+                ev.preventDefault();
+                console.log('drop')
+                //console.log(ev.dataTransfer.files[0])
+                reader.onload = function(ev){
+                    //获取图片的url
+                    var _img_src = ev.target.result;
+
+                    //添加预览图片到容器框
+                    showPrevImg(_img_container,_img_src);
+
+                }
+                
+                reader.readAsDataURL(ev.dataTransfer.files[0])
+
+            },false)
+          
+          	var reader1 = new FileReader();
+            //触发 change 事件
+            getDomById('fileSelecter').onchange = function(event1){
+                //获取文件对象
+                var file1 = event1.target.files[0];
+
+                //读取完成后触发
+                reader1.onload = function(ev){
+                    //获取图片的url
+                    var _img_src1 = ev.target.result;
+                    //添加预览图片到容器框
+                    showPrevImg(_img_container1,_img_src1);
+                }
+                //获取到数据的url 图片将转成 base64 格式
+                reader.readAsDataURL(file1);
+            }
+            _img_container1.addEventListener('dragover',function(ev){
+                //ev.stopPropagation();
+                ev.preventDefault();//阻止默认事件。比如说Chrome是直接将图片用浏览器打开
+                console.log('dragover')
+            },false)
+            // _img_container.addEventListener('dragend',function(ev){
+            //  ev.stopPropagation();
+            //  ev.preventDefault();
+            //  console.log('dragend')
+            // },false)
+            _img_container1.addEventListener('drop',function(ev){
+                //ev.stopPropagation();
+                ev.preventDefault();
+                console.log('drop')
+                //console.log(ev.dataTransfer.files[0])
+                reader1.onload = function(ev){
+                    //获取图片的url
+                    var _img_src1 = ev.target.result;
+
+                    //添加预览图片到容器框
+                    showPrevImg(_img_container1,_img_src1);
+
+                }
+                
+                reader1.readAsDataURL(ev.dataTransfer.files[0])
+
+            },false)
+        }
+
+        //简化 document.getElementById() 函数
+        function getDomById(id){
+            return document.getElementById(id);
+        }
+        function showPrevImg(_img_container,_img_src){
+            _img_container.innerHTML="";
+            //添加预览图片到容器框
+            var _imgs = _img_container.getElementsByTagName('img');
+            //容器中没有则创建，有则修改 src 属性
+            if(!_imgs.lenght){
+                _imgs[0] = document.createElement('img');
+                _imgs[0].setAttribute('src',_img_src);
+                _img_container.appendChild(_imgs[0]);
+            }else{
+                _imgs[0].setAttribute('src',_img_src);
+            }
+        }
+        //接下来要做的就是拖放结束展示图片预览效果
+      function showImg(){
+    document.getElementById('img').style.display='block';
+}
+     
+    </script>
+</body>
+</html>
