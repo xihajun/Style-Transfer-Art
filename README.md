@@ -1,3 +1,8 @@
+# Open Data Hackathon
+Code we used in **Bristol Open Data Jam/Hackathon** as well as **Pitches and commissioning session**.
+
+
+# Description
 ## Background
 
 Bristol City Council publishes many types of raw data to be transparent about the information they hold, and to encourage positive projects based on this data by any citizen or organisation.
