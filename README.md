@@ -7,7 +7,7 @@ Code we used in **Bristol Open Data Jam/Hackathon** as well as **Pitches and com
 
 Bristol City Council publishes many types of raw data to be transparent about the information they hold, and to encourage positive projects based on this data by any citizen or organisation.
 
-One of the most recent datasets to be published by Bristol Museums is thousands of images from the British Empire and Commonwealth (BEC) collection. You can see a curated selection of these images online “Empire through the Lens”.
+One of the most recent datasets to be published by Bristol Museums is thousands of images from the British Empire and Commonwealth (BEC) collection. You can see a curated selection of these images online [_“Empire through the Lens”_](https://exhibitions.bristolmuseums.org.uk/empire-through-the-lens/).
 
 At a hackathon hosted by Bristol’s Open Data team with support from the Jean Golding Institute, attendees were encouraged to make use of this new dataset. Our team formed around an idea of using image style transfer, a process of transforming the artistic style of one image based on another using Convolutional Neural Networks.
 
