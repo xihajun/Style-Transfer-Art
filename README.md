@@ -145,13 +145,21 @@ We even successfully built a crucial component of our future service. The metada
 We wanted to generate a list of keywords from the long form text captions that accompanied the images. This would allow us to come up with a classification for pictures using their description. Then, users would be able to select topics and get some pictures they want.
 
 Here in topic 2, our model has added bridge, street, river, house, gardens and some similar words into the same group.
+<figure>
+  <img src="http://www.labs.bristolmuseums.org.uk/wp-content/uploads/2019/03/image.png" alt="" title="Python is the language of choice for this particular application" />
+  <figcaption></figcaption>
+</figure>
 
-![](http://www.labs.bristolmuseums.org.uk/wp-content/uploads/2019/03/image.png)
-Python is the language of choice for this particular application
-![](http://www.labs.bristolmuseums.org.uk/wp-content/uploads/2019/03/image-2.png)
-Topic modelling reveals patterns of keyword abundance amongst the captions
-![](https://lh6.googleusercontent.com/okCcflbaEUA4NegePLCRqUREqlhd4Iql4vlPHpPj3lp_Q-a6XaOWIlcX5MhM_p0vxsHzJ0ajVIjmsY2gXusP7GrirpkYndwDjy-4pjadlbNjCNcvO7ThcY6O8-LB5QxAJNv7Bdzm)
-keywords extracted from the captions can help us build an interface to allow filtering on a theme
+<figure>
+  <img src="http://www.labs.bristolmuseums.org.uk/wp-content/uploads/2019/03/image-2.png" alt="" title="Topic modelling reveals patterns of keyword abundance amongst the captions" />
+  <figcaption></figcaption>
+</figure>
+
+<figure>
+  <img src="https://lh6.googleusercontent.com/okCcflbaEUA4NegePLCRqUREqlhd4Iql4vlPHpPj3lp_Q-a6XaOWIlcX5MhM_p0vxsHzJ0ajVIjmsY2gXusP7GrirpkYndwDjy-4pjadlbNjCNcvO7ThcY6O8-LB5QxAJNv7Bdzm" alt="" title="keywords extracted from the captions can help us build an interface to allow filtering on a theme" />
+  <figcaption></figcaption>
+</figure>
+
 ## Reflections
 
 After generating many examples we came together to discuss some of the ethical and legal implications of this technique.
