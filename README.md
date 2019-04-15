@@ -1,5 +1,3 @@
-# Can neural networks help us reinterpret history?
-March 24, 2019 Mark Pajak
 ## Background
 
 Bristol City Council publishes many types of raw data to be transparent about the information they hold, and to encourage positive projects based on this data by any citizen or organisation.
@@ -15,10 +13,10 @@ We hypothesised there would be value in restyling images from the dataset to dra
 
 ## The team
 
-Dave Rowe – Development Technical Lead for Bristol City Council and Open Data enthusiast
-Junfan Huang – MSc Mathematics of Cybersecurity student in University of Bristol
-Mark Pajak – Head of Digital at Bristol City Council Culture Team & Bristol Museums
-Rob Griffiths – Bristol resident and Artificial Intelligence Consultant for BJSS in the South West
+* **Dave Rowe** – Development Technical Lead for Bristol City Council and Open Data enthusiast
+* **Junfan Huang** – MSc Mathematics of Cybersecurity student in University of Bristol
+* **Mark Pajak** – Head of Digital at Bristol City Council Culture Team & Bristol Museums
+* **Rob Griffiths** – Bristol resident and Artificial Intelligence Consultant for BJSS in the South West
 ## Aim
 
 To assess the potential of Style Transfer as a technique for bringing attention back to historical images and exploring aspects of their modern relevance.
@@ -30,8 +28,13 @@ Natalie Thurlby from the Jean Golding Institute introduced us to a method of sty
 To start with, we hand-selected images from the collection we thought it would be interesting to transform. We tried to pair each ‘content’ image with ‘style’ images that might draw parallels with Bristol.
 
 ## Dockside Cranes
+<centre>
+<figure>
+  <img src="https://lh5.googleusercontent.com/zqknaQrOi-0f0Dsu5-ciOmBPDWDBbznHoiPvlSCgxY7_uJXKeuSEBDtYOnzqmh9pSscNF7C6qmbAvjF4MNggWOKMpReNw4UXOKkaJgcsF0OdTv0pSeRyFY6O2Oj3GqqB4dJSnJQb" alt=".." title="A railway steam crane lowers a train engine onto a bogie on the dockside at Kilindini harbour, Mombasa, Kenya." />
+  <figcaption>A railway steam crane lowers a train engine onto a bogie on the dockside at Kilindini harbour, Mombasa, Kenya.</figcaption>
+</figure>
+</centre>
 
-A railway steam crane lowers a train engine onto a bogie on the dockside at Kilindini harbour, Mombasa, Kenya.
 When we saw this image it immediately made us think of the docks at Bristol harbourside, by the Mshed.
 
 The SS Harmonides which transported the train [likely from Liverpool actually] to Kenya is just visible, docked further along the harbour.
@@ -146,12 +149,12 @@ We wondered whether this form of style transfer with heritage images was an inte
 
 We often found ourselves coming back to discussions of media rights and intellectual property. None of us have a legal background but we were aware that, while we wanted to acknowledge where we had borrowed other people’s work to perform this experiment, we were generating new works of art – and it was unclear where the ownership lay.
 
-Does this have potential?
+## Does this have potential?
 
 We thought, on balance, yes this was an interesting technique for both artistic historians and artists interested in history.
 
 We imagined their needs using the following user personas:
-
+![](http://www.labs.bristolmuseums.org.uk/wp-content/uploads/2019/03/image-1.png)
 
 Artistic Historians: ‘I want to explore the stories behind these images and bring them to life in a contemporary way for my audience.’
 Artists interested in history: ‘I want a creative tool to provide inspiration and see what my own personal, artistic style would look like applied to heritage images’.
