@@ -13,6 +13,7 @@ At a hackathon hosted by Bristol’s Open Data team with support from the Jean G
 
 In layman’s terms this method breaks down images into ‘content’ components and ‘style’ components, then combines them.
 
+![pasted image 0](https://user-images.githubusercontent.com/25631641/147922287-b5d83783-23ca-48e8-92f8-86ec399e08d9.png)
 
 We hypothesised there would be value in restyling images from the dataset to draw out themes of Bristol’s economic and cultural history when it comes to Empire and Commonwealth.
 
